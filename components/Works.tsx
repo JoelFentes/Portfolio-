@@ -1,4 +1,6 @@
-// src/components/Works.tsx
+import Link from 'next/link';
+
+
 export default function Works() {
   const projects = [
     {
@@ -28,9 +30,9 @@ export default function Works() {
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="group cursor-pointer">
-                <a href={project.link}>
+                <Link href={project.link}>
                     <div className="relative overflow-hidden rounded-2xl">
-                        <img
+                        <Image
                         src={project.img}
                         alt={project.title}
                         className="w-full h-80 object-fill group-hover:scale-110 transition-transform duration-500 mx-auto rounded-2xl"
@@ -44,7 +46,7 @@ export default function Works() {
                         </div>
                         </div>
                     </div>
-                </a>
+                </Link>
             </div>
           ))}
         </div>

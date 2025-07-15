@@ -1,6 +1,8 @@
 'use client'
 
 import React, { useState } from "react";
+import Link from 'next/link';
+
 
 
 const Navbar = () => {
@@ -13,13 +15,13 @@ const Navbar = () => {
           <div className="text-2xl font-bold text-slate-800">Joel Fentes</div>
           <div className={`md:flex space-x-8 ${menuOpen ? "flex flex-col absolute top-16 bg-white w-full left-0 p-4 md:static md:flex-row md:p-0" : "hidden md:flex"}`}>
             {["home", "about", "services", "portfolio"].map((id) => (
-              <a
+              <Link
                 key={id}
                 href={`#${id}`}
                 className="text-slate-600 hover:text-blue-600 transition-colors"
               >
                 {id.charAt(0).toUpperCase() + id.slice(1)}
-              </a>
+              </Link>
             ))}
           </div>
           <button
