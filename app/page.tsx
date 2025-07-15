@@ -32,7 +32,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
             <div className="space-y-8">
               <div>
-                <p className="text-blue-600 font-medium text-lg">Hello, I'm</p>
+                <p className="text-blue-600 font-medium text-lg">Hello, Im</p>
                 <h1 className="text-5xl lg:text-6xl font-bold text-slate-800 leading-tight">
                   Joel Fentes 
                 </h1>
