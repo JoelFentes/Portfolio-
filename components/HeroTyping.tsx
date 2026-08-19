@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
 import { useEffect, useState } from "react";
 
 export default function HeroTyping() {
   const [text, setText] = useState("");
-  const fullText = "Full Stack Trainee Developer";
-  const typingSpeed = 80; 
+  const fullText = "desenvolvedor full-stack.";
+  const typingSpeed = 70;
 
   useEffect(() => {
     let index = 0;
@@ -19,9 +19,11 @@ export default function HeroTyping() {
   }, []);
 
   return (
-    <h2 className="text-2xl lg:text-3xl text-slate-600 mt-4">
-      {text}
-      <span className="animate-pulse">|</span>
-    </h2>
+    <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl lg:text-[52px]">
+      Joel Fentes,
+      <br />
+      <span className="text-accent">{text}</span>
+      <span className="animate-pulse text-accent">|</span>
+    </h1>
   );
 }
