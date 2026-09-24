@@ -7,16 +7,18 @@ type Project = {
   description: string;
   img?: string;
   link?: string;
+  demo?: string;
 };
 
 const PROJECTS: Project[] = [
   {
-    title: "Platform of Developers",
-    tech: "React · Node.js · Prisma",
+    title: "DevPortfolio",
+    tech: "Next.js · TypeScript · MUI · Prisma",
     description:
-      "Plataforma colaborativa para desenvolvedores compartilharem projetos e construírem juntos.",
-    img: "/images/project1.jpg",
-    link: "https://github.com/JoelFentes/Projeto-Web",
+      "Plataforma onde desenvolvedores montam portfólios com projetos e stack, filtráveis por tecnologia.",
+    img: "/images/devportfolio.png",
+    link: "https://github.com/JoelFentes/DevPortfolio-Portfolio-de-Desenvolvedores-",
+    demo: "",
   },
   {
     title: "Sowing E-commerce",
@@ -56,6 +58,15 @@ export default function Works() {
                     />
                     {project.link && (
                       <div className="pointer-events-none absolute inset-0 flex items-end gap-2 bg-gradient-to-t from-ink/75 to-transparent to-60% p-3.5 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                        {project.demo && (
+                          <Link
+                            href={project.demo}
+                            target="_blank"
+                            className="pointer-events-auto rounded-full bg-accent px-3 py-1.5 text-xs font-semibold text-white"
+                          >
+                            Ver demo
+                          </Link>
+                        )}
                         <Link
                           href={project.link}
                           target="_blank"
@@ -92,9 +103,19 @@ export default function Works() {
                       >
                         Código
                       </Link>
-                      <span className="rounded-full border border-dashed border-border px-3 py-1.5 text-xs font-semibold text-ink-soft">
-                        Demo em breve
-                      </span>
+                      {project.demo ? (
+                        <Link
+                          href={project.demo}
+                          target="_blank"
+                          className="rounded-full border border-ink px-3 py-1.5 text-xs font-semibold text-ink transition-colors hover:bg-ink hover:text-white"
+                        >
+                          Ver demo
+                        </Link>
+                      ) : (
+                        <span className="rounded-full border border-dashed border-border px-3 py-1.5 text-xs font-semibold text-ink-soft">
+                          Demo em breve
+                        </span>
+                      )}
                     </>
                   ) : (
                     <Link
