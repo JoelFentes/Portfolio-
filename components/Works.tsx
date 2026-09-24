@@ -26,12 +26,6 @@ const PROJECTS: Project[] = [
     img: "/images/project2.jpg",
     link: "https://github.com/JoelFentes/DessertShop",
   },
-  {
-    title: "Seu próximo projeto",
-    tech: "A definir",
-    description:
-      "Espaço reservado para o próximo projeto — me envie o nome, stack e link quando estiver pronto.",
-  },
 ];
 
 export default function Works() {
